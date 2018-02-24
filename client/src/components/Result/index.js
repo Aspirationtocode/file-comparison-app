@@ -31,7 +31,7 @@ class Result extends Component {
 				</FlexContainer>
 			);
 		}
-		return <Header title="☝Для сравнения загрузите 2 файла.☝" size="1.2x" />;
+		return <Header title="🔒Для сравнения загрузите 2 файла.🔒" size="1.2x" />;
 	}
 }
 

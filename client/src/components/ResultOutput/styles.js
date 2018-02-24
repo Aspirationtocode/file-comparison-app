@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const getBg = ({ outputIndex, isStringIsDefferent }) => {
-	return isStringIsDefferent ? (outputIndex ? '#40c' : 'yellow') : '#0a0';
-};
+const getBg = ({ outputIndex, isStringIsDefferent }) => isStringIsDefferent ? (outputIndex ? '#40c' : 'yellow') : '#0a0';
 
 export const _ResultOutput = styled.div`
 	width: calc(50% - 5px);

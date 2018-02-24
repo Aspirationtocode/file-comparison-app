@@ -6,15 +6,9 @@ import textExtensions from 'text-extensions';
 import { statusTypes, readFile } from './helpers';
 import { _DropZoneStatus, _DropZoneStatusText, dropZoneStyles } from './styles';
 
-import Header from '../Header';
-
 class FileReaderElement extends Component {
 	state = {
 		status: statusTypes().DEFAULT,
-		file: {
-			name: null,
-			content: null,
-		},
 	};
 
 	handleFileAccept = accepted => {

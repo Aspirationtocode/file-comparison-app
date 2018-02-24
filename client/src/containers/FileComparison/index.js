@@ -14,9 +14,7 @@ class FileComparison extends Component {
 
 	handleReadFile = (fileIndex, file) => {
 		const { files } = this.state;
-		const newFiles = files.map(function(f, index) {
-			return index === fileIndex ? file : f;
-		});
+		const newFiles = files.map((f, index) => index === fileIndex ? file : f);
 		this.setState({
 			files: newFiles,
 		});
@@ -24,15 +22,13 @@ class FileComparison extends Component {
 
 	renderFileReaderElements = () => {
 		const { state } = this;
-		return state.files.map((el, index) => {
-			return (
-				<FileReaderElement
-					key={index}
-					index={index}
-					handleReadFile={this.handleReadFile}
-				/>
-			);
-		});
+		return state.files.map((el, index) => (
+			<FileReaderElement
+				key={index}
+				index={index}
+				handleReadFile={this.handleReadFile}
+			/>
+		));
 	};
 
 	render() {

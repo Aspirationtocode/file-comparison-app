@@ -12,10 +12,10 @@ export const statusTypes = (filename = '', isFolder) => ({
 	},
 });
 
-export const readFile = file => {
-	return new Promise((resolve, reject) => {
+export const readFile = file =>
+	new Promise(resolve => {
 		const reader = new FileReader();
-		reader.addEventListener('load', function(event) {
+		reader.addEventListener('load', event => {
 			const { result } = event.target;
 			resolve(result);
 		});
@@ -23,4 +23,3 @@ export const readFile = file => {
 			reader.readAsText(file);
 		}
 	});
-};

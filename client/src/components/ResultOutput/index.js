@@ -11,19 +11,17 @@ import {
 class ResultOutput extends Component {
 	renderOutputStrings = () => {
 		const { strings, diffIndexes, outputIndex } = this.props;
-		return strings.map((string, stringIndex) => {
-			return (
-				<_ResultOutputStringWrapper key={stringIndex}>
-					<_ResultOutputStringIndex>{stringIndex + 1}</_ResultOutputStringIndex>
-					<_ResultOutputString
-						isStringIsDefferent={diffIndexes.indexOf(stringIndex) !== -1}
-						outputIndex={outputIndex}
-					>
-						<_ResultOutputStringText>{string}</_ResultOutputStringText>
-					</_ResultOutputString>
-				</_ResultOutputStringWrapper>
-			);
-		});
+		return strings.map((string, stringIndex) => (
+			<_ResultOutputStringWrapper key={stringIndex}>
+				<_ResultOutputStringIndex>{stringIndex + 1}</_ResultOutputStringIndex>
+				<_ResultOutputString
+					isStringIsDefferent={diffIndexes.indexOf(stringIndex) !== -1}
+					outputIndex={outputIndex}
+				>
+					<_ResultOutputStringText>{string}</_ResultOutputStringText>
+				</_ResultOutputString>
+			</_ResultOutputStringWrapper>
+		));
 	};
 	render() {
 		return (

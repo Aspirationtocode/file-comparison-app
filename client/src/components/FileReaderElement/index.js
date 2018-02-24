@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 import FontAwesome from 'react-fontawesome';
 import textExtensions from 'text-extensions';
@@ -7,6 +8,11 @@ import { statusTypes, readFile } from './helpers';
 import { _DropZoneStatus, _DropZoneStatusText, dropZoneStyles } from './styles';
 
 class FileReaderElement extends Component {
+	static propTypes = {
+		index: PropTypes.number.isRequired,
+		handleReadFile: PropTypes.func.isRequired,
+	};
+
 	state = {
 		status: statusTypes().DEFAULT,
 	};

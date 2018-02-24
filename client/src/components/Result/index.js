@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import FlexContainer from 'react-styled-flexbox';
 
 import ResultOutput from '../ResultOutput';
@@ -7,6 +8,14 @@ import Header from '../Header';
 import { getDiffIndexes } from './helpers';
 
 class Result extends Component {
+	static propTypes = {
+		files: PropTypes.arrayOf(
+			PropTypes.shape({
+				content: PropTypes.string,
+				name: PropTypes.string,
+			}),
+		).isRequired,
+	};
 	render() {
 		const { files } = this.props;
 		if (files[0] && files[1]) {

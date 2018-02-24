@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
 	_ResultOutput,
 	_ResultOutputString,
@@ -9,6 +10,11 @@ import {
 } from './styles';
 
 class ResultOutput extends Component {
+	static propTypes = {
+		strings: PropTypes.arrayOf(PropTypes.string).isRequired,
+		diffIndexes: PropTypes.arrayOf(PropTypes.number).isRequired,
+		outputIndex: PropTypes.number.isRequired,
+	};
 	renderOutputStrings = () => {
 		const { strings, diffIndexes, outputIndex } = this.props;
 		return strings.map((string, stringIndex) => (

@@ -14,7 +14,7 @@ class FileComparison extends Component {
 
 	handleReadFile = (fileIndex, file) => {
 		const { files } = this.state;
-		const newFiles = files.map((f, index) => index === fileIndex ? file : f);
+		const newFiles = files.map((f, index) => (index === fileIndex ? file : f));
 		this.setState({
 			files: newFiles,
 		});

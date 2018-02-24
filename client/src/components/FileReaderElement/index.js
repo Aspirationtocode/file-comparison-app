@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
 import FontAwesome from 'react-fontawesome';
+import textExtensions from 'text-extensions';
 
 import { statusTypes, readFile } from './helpers';
 import { _DropZoneStatus, _DropZoneStatusText, dropZoneStyles } from './styles';
@@ -49,10 +50,11 @@ class FileReaderElement extends Component {
 
 	render() {
 		const { state } = this;
+		const accept = textExtensions.map(ext => `.${ext}`).join(', ');
 		return (
 			<Dropzone
 				multiple={false}
-				accept="text/*, .js"
+				accept={accept}
 				onDrop={this.handleFileDrop}
 				{...dropZoneStyles}
 			>

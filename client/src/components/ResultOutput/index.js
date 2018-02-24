@@ -5,6 +5,7 @@ import {
 	_ResultOutputStringText,
 	_ResultOutputStringWrapper,
 	_ResultOutputStringIndex,
+	_ResultOutputInner,
 } from './styles';
 
 class ResultOutput extends Component {
@@ -13,7 +14,7 @@ class ResultOutput extends Component {
 		return strings.map((string, stringIndex) => {
 			return (
 				<_ResultOutputStringWrapper key={stringIndex}>
-					<_ResultOutputStringIndex>{stringIndex}</_ResultOutputStringIndex>
+					<_ResultOutputStringIndex>{stringIndex + 1}</_ResultOutputStringIndex>
 					<_ResultOutputString
 						isStringIsDefferent={diffIndexes.indexOf(stringIndex) !== -1}
 						outputIndex={outputIndex}
@@ -25,7 +26,11 @@ class ResultOutput extends Component {
 		});
 	};
 	render() {
-		return <_ResultOutput>{this.renderOutputStrings()}</_ResultOutput>;
+		return (
+			<_ResultOutput>
+				<_ResultOutputInner>{this.renderOutputStrings()}</_ResultOutputInner>
+			</_ResultOutput>
+		);
 	}
 }
 

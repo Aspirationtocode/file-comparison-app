@@ -1,4 +1,5 @@
 # File Comparison app
+[![Build Status](https://travis-ci.org/Aspirationtocode/file-comparison-app.svg?branch=master)](https://travis-ci.org/Aspirationtocode/file-comparison-app)
 
 ## Getting started
 

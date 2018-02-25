@@ -6,6 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=DEVELOPMENT webpack-dev-server",
     "build": "cross-env NODE_ENV=PRODUCTION webpack -p",
+    "test": "jest",
     "lint": "./node_modules/.bin/eslint ./client --fix"
   },
   "author": "Evgeniy Kulazhskiy",
@@ -29,6 +30,7 @@
     "eslint-plugin-react": "^7.7.0",
     "file-loader": "^1.1.8",
     "html-webpack-plugin": "^2.30.1",
+    "jest": "^22.4.2",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
   },

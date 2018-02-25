@@ -17,7 +17,6 @@ export const readFile = file =>
 		const reader = new FileReader();
 		reader.addEventListener('load', event => {
 			const { result } = event.target;
-			console.log(event.target);
 			resolve(result);
 		});
 		if (file) {
